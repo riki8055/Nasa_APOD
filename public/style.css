@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.bord {
+    border: 1px solid red;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+a {
+    color: #8d99ae;
+}
+
+a:focus {
+    color: #555;
+}
+
+header, footer {
+    width: 100vw;
+    background-color: #14213d;
+}
+
+header {
+    padding: 5rem 0;
+    position: relative;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer i{
+    color: red;
+}
+
+header {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+header h1 {
+    margin-bottom: 5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    margin: 2rem 0;
+}
+
+.container .box {
+    margin-bottom: 2rem;
+}
+
+.container p{
+    margin: 3rem 1rem;
+    font-size: 1rem;
+    letter-spacing: .2px;
+    line-height: 1.5;
+}
+
+.cprt {
+    /*width: max-content;*/
+    background-color: #eee;
+    padding: 2px 7px;
+    border-radius: 40px;
+    /*margin: 0 auto;*/
+}
+
+.cprt b {
+    margin-right: .5rem;
+}
+
+@media(min-width: 1024px) {
+    header h1.title {
+        font-size: 4rem;
+    }
+
+    .container p {
+        font-size: 1.1rem;
+    }
+
+    .container h1.title {
+        font-size: 3rem;
+    }
+
+    a:hover {
+        color: #555;
+    }
+}

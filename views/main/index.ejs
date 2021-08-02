@@ -1,0 +1,16 @@
+<% layout('./layouts/boilerplate') %>
+    
+<h1 class="title"><%= result.data.title %></h1>
+<% if(result.data.copyright) { %>
+    <p class="cprt"><b>&copy;</b><%= result.data.copyright %></p>
+<% } %>
+
+<div class="box">
+    <% if(result.data.url.endsWith(".jpg")) { %>
+        <img src="<%= result.data.hdurl %>" alt="" class="img">
+    <% } else { %>
+        <iframe src="<%= result.data.url %>"></iframe>
+    <% } %>
+</div>
+
+<p class="explanation has-text-justified"><%= result.data.explanation %></p>
