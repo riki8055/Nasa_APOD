@@ -82,16 +82,39 @@ header h1 {
     line-height: 1.5;
 }
 
-.cprt {
+.cprt, .date {
     /*width: max-content;*/
     background-color: #eee;
     padding: 2px 7px;
     border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /*margin: 0 auto;*/
 }
 
-.cprt b {
+.date i {
+    font-size: 15px;
+}
+
+.cprt b,
+.date i {
     margin-right: .5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    width: max-content;
+    letter-spacing: 2px;
+}
+
+.hide {
+    display: none;
 }
 
 @media(min-width: 1024px) {

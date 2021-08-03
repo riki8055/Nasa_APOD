@@ -16,3 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// FOOTER ACTIONS
+const credits = document.getElementById('credits');
+const idk = document.getElementById('idk');
+
+setInterval(switchIt, 6000);
+
+function switchIt() {
+    credits.classList.toggle('hide');
+    idk.classList.toggle('hide');
+}
