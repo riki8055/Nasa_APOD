@@ -4,6 +4,7 @@
   "description": "NASA Astronomical Picture of the Day",
   "main": "app.js",
   "scripts": {
+    "start": "node ./src/app.js",
     "dev": "nodemon ./src/app.js -e js, ejs"
   },
   "repository": {
