@@ -10,7 +10,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
     const date = searchInp.value
 
-    fetch('http://localhost:3000/apod?date=' + date).then((response) => {
+    fetch('/apod?date=' + date).then((response) => {
         response.json().then((data) => {
             if(data.error) {
                 apodResult.classList.add("err")

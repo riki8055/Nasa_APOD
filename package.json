@@ -1,6 +1,6 @@
 {
   "name": "nasa_apod",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "NASA Astronomical Picture of the Day",
   "main": "app.js",
   "scripts": {
