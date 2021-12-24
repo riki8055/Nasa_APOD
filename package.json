@@ -1,22 +1,28 @@
 {
-  "name": "nasaapod",
-  "version": "1.0.0",
-  "description": "",
+  "name": "nasa_apod",
+  "version": "2.0.0",
+  "description": "NASA Astronomical Picture of the Day",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "dev": "nodemon ./src/app.js -e js, ejs"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riki8055/Nasa_APOD.git"
+  },
+  "author": "Ritik Thakur",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riki8055/Nasa_APOD/issues"
+  },
+  "homepage": "https://github.com/riki8055/Nasa_APOD#readme",
   "dependencies": {
-    "axios": "^0.21.1",
-    "connect-flash": "^0.1.1",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
-    "ejs-mate": "^3.0.0",
-    "express": "^4.17.1",
-    "express-session": "^1.17.2",
-    "nodemon": "^2.0.12"
+    "express": "^4.17.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

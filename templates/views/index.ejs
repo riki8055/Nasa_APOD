@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa Apod</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="/images/link-1.png" />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="nav">
+      <div class="nav-wrapper center">
+          <a href="/"><img src="/images/logo-1.png" alt="APOD" class="logo nav-logo"></a>
+          <button class="btn nav-btn center">
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+          </button>
+      </div>
+    </nav>
+
+    <section class="sidebar">
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#" class="menu-link" data-content="Home">Home</a>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="menu-link" data-content="APOD">APOD</a>
+        </li>
+
+        <li class="menu-item">
+          <a href="https://www.nasa.gov" class="menu-link" data-content="Nasa" target="_blank">Nasa</a>
+        </li>
+      </ul>
+
+      <div class="social-media">
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+        
+        <a href="#">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <div class="copyright">
+          <p>Copyright &copy; 2021</p>
+          <p>Created By <a href="https://www.dribbble.com/ritik8055" target="_blank">Ritik Thakur</a></p>
+      </div>
+    </section>
+
+    <div class="container">
+        <header class="header center">
+            <div class="img-wrapper">
+                <img src="/images/cover-1.jpg" alt="Image" class="bg-img">
+            </div>
+            
+            <h1 class="heading-1">nasa</h1>
+            <h1 class="heading-2">apod</h1>
+            <p class="text">astronomical picture of the day</p>
+            <div class="social-media-wrapper center">
+                <a href="#link" class="link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="#link" class="link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#link" class="link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <a href="https://www.nasa.gov" target="_blank" class="nasa-link center" title="Visit NASA">
+                <img src="/images/nasa-logo.png" alt="nasa-logo">
+            </a>
+
+            <button class="btn go-btn">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+        </header>
+
+        <!-- APOD Section -->
+        <section class="apod-section">
+          <div class="section-wrapper center">
+            <div class="loading center">
+              <div class="load-wrapp">
+                <div class="load-3">
+                  <p>Loading...</p>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="main center show-result">
+              <form class="date">
+                <input type="date" title="Search by date">
+                <button>
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+
+              <div class="result center" id="apod-result">
+                <p class="success">Showing results for <span id="apod-date"><%= data.date %></span></p>
+                <p class="error">Date must be between 1996-08-15 to 2021-12-21</p>
+                <div class="close-btn">
+                  <i class="far fa-times-circle"></i>
+                </div>
+              </div>
+
+              <div class="wrapper center">
+                <div class="img-wrapper">
+                  <img src="<%= data.image_url %>" alt="apod" id="apod-img">
+                </div>
+                
+                <div class="content-wrapper">
+                  <h2 class="content-title" id="apod-title"><%= data.title %> </h2>
+                  <p class="content-text" id="apod-text"><%= data.explanation %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="to-top">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+        </section>
+        <!-- End of APOD Section -->
+    </div>
+    
+    <script src="/js/script.js"></script>
+    <script src="/js/apod.js"></script>
+</body>
+</html>
