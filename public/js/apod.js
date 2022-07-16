@@ -1,32 +1,34 @@
-const form = document.querySelector('.date')
-const searchInp = document.querySelector('.date input')
-const apodDate = document.getElementById('apod-date')
-const apodResult = document.getElementById('apod-result')
-const apodImg = document.getElementById('apod-img')
-const apodTitle = document.getElementById('apod-title')
-const apodText = document.getElementById('apod-text')
+const loadingContainer = document.querySelector(".loading-container");
+const container = document.querySelector(".container");
+const navBtnOPen = document.querySelector(".nav-btn-open");
+const navBtnClose = document.querySelector(".nav-btn-close");
+const dateForm = document.querySelector(".date-form");
+const navbar = document.querySelector(".navbar");
+const resultCloseBtn = document.querySelector(".apod-section .result .btn");
+const apodSection = document.querySelector(".apod-section");
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const date = searchInp.value
+document.onreadystatechange = () => {
+  if (document.readyState !== "complete") {
+    container.style.opacity = 0;
+    container.style.visibility = "hidden";
+    loadingContainer.style.opacity = 1;
+    loadingContainer.style.visibility = "visible";
+  } else {
+    container.style.opacity = 1;
+    container.style.visibility = "visible";
+    loadingContainer.style.opacity = 0;
+    loadingContainer.style.visibility = "hidden";
+  }
+};
 
-    fetch('/apod?date=' + date).then((response) => {
-        response.json().then((data) => {
-            if(data.error) {
-                apodResult.classList.add("err")
-                apodResult.querySelector('.error').textContent = data.error
-            } else {
-                if(apodResult.classList.contains("err")) {
-                    apodResult.classList.remove("err")
-                }
-                apodDate.textContent = data.date
-                apodImg.src = data.image_url
-                apodTitle.textContent = data.title
-                apodText.textContent = data.explanation
-            }
-        })
-    })
-    document.querySelector('.apod-section').classList.remove('display')
-    showApod()
-    document.querySelector('.apod-section .main').classList.add("show-result")
-})
+navBtnOPen.addEventListener("click", () => {
+  container.classList.add("change");
+});
+
+navBtnClose.addEventListener("click", () => {
+  container.classList.remove("change");
+});
+
+resultCloseBtn.addEventListener("click", () => {
+  resultCloseBtn.parentElement.remove();
+});

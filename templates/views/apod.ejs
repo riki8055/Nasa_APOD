@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/link-1.png">
+    <title>Nasa Apod</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/apod.css">
+</head>
+
+<body>
+    <div class="loading-container center">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Sidebar -->
+        <section class="sidebar center">
+            <button class="btn nav-btn-close center">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </button>
+            <div class="section-links center">
+                <a href="/" class="home" data-content="HOME">Home</a>
+                <a href="/apod" class="apod" data-content="APOD">Apod</a>
+                <a href="https://www.nasa.gov" class="nasa-website" data-content="NASA" target="_blank">Nasa</a>
+            </div>
+            <div class="social-media-links center">
+                <a href="#link">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#link">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+        </section>
+        <!-- End of Sidebar -->
+
+        <!-- Navbar -->
+        <nav class="navbar center">
+            <a href="#link" class="logo-main">
+                <img src="/images/logo-1.png" alt="logo">
+            </a>
+            <button class="btn nav-btn-open center">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </button>
+        </nav>
+        <!-- End of Navbar -->
+
+        <!-- APOD Section -->
+        <section class="apod-section center">
+            <form action="/apod" class="date-form center mb-5" method="GET">
+                <input type="date" name="date">
+                <button class="btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <div class="result center mb-10">
+                <% if(data) { %>
+                    <p class="success">Showing results for <%= data.date %>
+                    </p>
+                    <% } else { %>
+                        <p class="failure">
+                            <%= error %>
+                        </p>
+                        <% } %>
+                            <button class="btn center">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+            </div>
+
+            <% if(data) { %>
+                <div class="apod-main center mb-10">
+                    <% if(/\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(data.image_url)) { %>
+                        <img src=<%=data.image_url %>>
+                        <% } else { %>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/z4UM-D7CNhg"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <% } %>
+                                <div class="apod-main-content center">
+                                    <h1>
+                                        <%= data.title %>
+                                    </h1>
+                                    <p>
+                                        <%= data.explanation %>
+                                    </p>
+                                </div>
+                                <% } else { %>
+                                    <div class="apod-no-data center">
+                                        <img src="/images/spaceship.png">
+                                        <p>No Results!</p>
+                                    </div>
+                                    <% } %>
+                </div>
+        </section>
+        <!-- End of APOD Section -->
+
+        <footer class="footer center">
+            <p class="center">Created with <i class="fa-solid fa-heart"></i></p>
+            <p>Created by <a href="#link">Ritik Thakur</a></p>
+        </footer>
+
+        <button class="btn to-home-btn">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script src="/js/apod.js"></script>
+</body>
+
+</html>
