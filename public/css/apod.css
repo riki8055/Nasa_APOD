@@ -43,6 +43,7 @@ body {
 .bord {
   border: 0.1rem solid red;
 }
+
 /* End of Temps */
 .loading-container {
   width: 100vw;
@@ -223,7 +224,6 @@ body {
   color: #666;
   margin: 0 3rem;
 }
-
 /* End of Sidebar */
 
 /* Navbar */
@@ -255,10 +255,6 @@ body {
   align-items: flex-start;
 }
 
-/* .change .nav-btn {
-  transform: translateX(-20rem);
-} */
-
 .nav-btn-open .line,
 .nav-btn-close .line {
   width: 100%;
@@ -274,23 +270,6 @@ body {
 .nav-btn-open .line-2 {
   width: 50%;
 }
-
-/* .change .line {
-  background-color: #333;
-}
-
-.change .line-1 {
-  transform: rotate(45deg) translate(0.9rem, 1rem);
-}
-
-.change .line-2 {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.change .line-3 {
-  transform: rotate(-45deg) translate(0.9rem, -1rem);
-} */
 /* End of Navbar */
 
 /* Apod Section */
@@ -301,17 +280,7 @@ body {
   flex-direction: column;
   position: relative;
   padding-top: 20rem;
-  /* display: none; */
 }
-
-/* .apod-section .navbar {
-  height: 12rem;
-  background-color: #3e3f4c;
-  position: fixed;
-  top: 0;
-  left: 0;
-  
-} */
 
 .date-form input {
   height: 4rem;
@@ -492,7 +461,6 @@ body {
 .footer p a {
   color: #fff;
   font-weight: 500;
-  /* border-bottom: 0rem solid #fff; */
   transition: color 0.2s, border-bottom 0.1s;
 }
 
@@ -703,7 +671,6 @@ body {
   }
 
   .apod-section .result p {
-    /* width: max-content; */
     padding: 1.5rem;
   }
 
@@ -727,8 +694,6 @@ body {
   }
 
   .apod-section .result button {
-    /* width: 3rem; */
-    /* height: 1.8rem; */
     margin-right: 1.5rem;
   }
 
