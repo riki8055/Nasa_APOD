@@ -395,3 +395,169 @@ html {
   filter: grayscale(0);
 }
 /* End of Header */
+
+/* Resposives */
+@media (max-width: 1650px) {
+  html {
+    font-size: 58.2%;
+  }
+
+  .sidebar {
+    width: 40rem;
+    right: -45rem;
+  }
+
+  .section-links a,
+  .social-media-links a,
+  .social-media-section i {
+    font-size: 2.5rem;
+  }
+
+  .logo-main {
+    width: 14rem;
+  }
+
+  .nav-btn-open .line,
+  .nav-btn-close .line {
+    height: 0.3rem;
+  }
+
+  .banner {
+    width: 90rem;
+  }
+
+  .banner-heading {
+    font-size: 11.5rem;
+  }
+
+  .banner-text {
+    font-size: 3rem;
+  }
+
+  .btn-to-apod {
+    width: 33.5rem;
+    height: 6.5rem;
+    font-size: 1.5rem;
+  }
+
+  .social-media-section {
+    height: 20rem;
+  }
+
+  .nasa-icon img {
+    width: 7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  .navbar {
+    height: 10rem;
+    padding: 6rem;
+  }
+
+  .banner {
+    width: 80rem;
+    height: 42rem;
+  }
+
+  .banner-heading {
+    font-size: 10rem;
+  }
+
+  .banner-text {
+    font-size: 2.5rem;
+  }
+
+  .btn-to-apod {
+    width: 30rem;
+    height: 6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 52.5%;
+  }
+
+  .social-media-section {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
+
+  .sidebar {
+    width: 100%;
+    right: -110%;
+  }
+
+  .banner {
+    width: 100%;
+    height: 40rem;
+  }
+
+  .banner-heading {
+    font-size: 8rem;
+  }
+
+  .btn-to-apod {
+    width: 28rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    padding: 2rem 3rem;
+  }
+
+  .banner {
+    height: 38rem;
+  }
+  .banner-heading {
+    font-size: 6rem;
+  }
+
+  .banner-text {
+    font-size: 2.3rem;
+    letter-spacing: 1.8rem;
+    text-indent: 1.8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo-main {
+    width: 10rem;
+  }
+
+  .nav-btn-open .line,
+  .nav-btn-close .line {
+    height: 0.2rem;
+  }
+
+  .banner-heading {
+    font-size: 5rem;
+    letter-spacing: 6rem;
+    text-indent: 6rem;
+  }
+
+  .banner-text {
+    font-size: 2rem;
+    letter-spacing: 1.2rem;
+    text-indent: 1.2rem;
+  }
+
+  .btn-to-apod {
+    width: 25rem;
+    height: 5rem;
+    font-size: 1.2rem;
+  }
+}
+/* End of Resposives */

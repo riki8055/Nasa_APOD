@@ -501,3 +501,247 @@ body {
   border-bottom: 0.2rem solid #fff;
 }
 /* End of Footer */
+
+/* Responsives */
+@media (max-width: 1650px) {
+  html {
+    font-size: 58.2%;
+  }
+
+  .sidebar {
+    width: 40rem;
+    right: -45rem;
+  }
+
+  .section-links a,
+  .social-media-links a {
+    font-size: 2.5rem;
+  }
+
+  .navbar {
+    height: 10rem;
+  }
+
+  .logo-main {
+    width: 12rem;
+  }
+
+  .nav-btn-open .line,
+  .nav-btn-close .line {
+    height: 0.3rem;
+  }
+
+  .apod-section {
+    padding-top: 15rem;
+  }
+
+  .date-form input,
+  .date-form button {
+    height: 3.5rem;
+    font-size: 2rem;
+  }
+
+  .apod-section .result {
+    margin-top: 1.5rem;
+  }
+
+  .apod-section .result p {
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .apod-section .result button {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 2rem;
+  }
+
+  .apod-main img {
+    width: 40rem;
+  }
+
+  .apod-main-content {
+    max-width: 90rem;
+  }
+
+  .apod-main-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .apod-main-content p {
+    font-size: 1.6rem;
+  }
+
+  .apod-no-data p {
+    font-size: 7rem;
+    margin-bottom: 7rem;
+  }
+
+  .apod-no-data img {
+    width: 30%;
+  }
+
+  .footer {
+    height: 7rem;
+  }
+
+  .footer p {
+    font-size: 1.5rem;
+  }
+
+  .footer p i {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  .apod-main img {
+    width: 35rem;
+  }
+
+  .apod-main-content {
+    max-width: 80rem;
+  }
+
+  .apod-main-content h1 {
+    font-size: 2.9rem;
+  }
+
+  .apod-main-content p {
+    font-size: 1.4rem;
+  }
+
+  .apod-no-data p {
+    font-size: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  .footer p {
+    font-size: 1.4rem;
+  }
+
+  .footer p i {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 52.5%;
+  }
+
+  .navbar {
+    height: 8rem;
+    padding: 5rem 6rem;
+  }
+
+  .apod-section .result p {
+    font-size: 1.3rem;
+  }
+
+  .apod-section .result button {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .apod-section .result button i {
+    font-size: 1rem;
+  }
+
+  .apod-main {
+    flex-direction: column;
+  }
+
+  .apod-main img {
+    width: 40rem;
+    margin-bottom: 8rem;
+  }
+
+  .apod-main-content {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .apod-main-content h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .apod-main-content p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
+
+  .sidebar {
+    width: 100%;
+    right: -110%;
+  }
+
+  .apod-main-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    padding: 2rem 3rem;
+  }
+
+  .apod-section .result {
+    width: calc(100% - 3rem);
+  }
+
+  .apod-section .result p {
+    /* width: max-content; */
+    padding: 1.5rem;
+  }
+
+  .apod-no-data img {
+    width: 50%;
+  }
+
+  .footer p.name {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo-main {
+    width: 10rem;
+  }
+
+  .nav-btn-open .line,
+  .nav-btn-close .line {
+    height: 0.2rem;
+  }
+
+  .apod-section .result button {
+    /* width: 3rem; */
+    /* height: 1.8rem; */
+    margin-right: 1.5rem;
+  }
+
+  .apod-main img {
+    margin-bottom: 5rem;
+  }
+
+  .apod-main-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .apod-no-data p {
+    font-size: 4rem;
+  }
+}
+/* End of Responsives */
