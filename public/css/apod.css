@@ -640,9 +640,8 @@ body {
   }
 
   .apod-main-content p {
-    font-size: 1.5rem;
-    line-height: 1.7;
-    text-align: center;
+    font-size: 1.7rem;
+    padding: 0 1rem;
   }
 }
 
@@ -668,10 +667,16 @@ body {
 
   .apod-section .result {
     width: calc(100% - 3rem);
+    margin-bottom: 6rem;
   }
 
   .apod-section .result p {
     padding: 1.5rem;
+  }
+
+  iframe {
+    width: calc(100% - 2rem);
+    margin-bottom: 5rem;
   }
 
   .apod-no-data img {

@@ -98,9 +98,10 @@
                     <% if(/\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(data.image_url)) { %>
                         <img src=<%=data.image_url %>>
                         <% } else { %>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/z4UM-D7CNhg"
+                            <iframe width="560" height="315" src=<%=data.image_url%>
                                 title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                                picture-in-picture"
                                 allowfullscreen></iframe>
                             <% } %>
                                 <div class="apod-main-content center">
